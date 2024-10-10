@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'guru.qa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "org.junit.jupiter:junit-jupiter:5.11.1",
+            "com.codeborne:selenide:7.4.3",
+            "com.codeborne:pdf-test:1.9.0",
+            "com.codeborne:xls-test:1.4.3",
+            "com.opencsv:opencsv:5.9",
+            "com.fasterxml.jackson.core:jackson-core:2.13.1",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.0"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
